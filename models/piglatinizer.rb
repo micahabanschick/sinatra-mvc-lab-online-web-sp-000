@@ -13,9 +13,14 @@ class PigLatinizer
   def pig_word(word)
     cons = "bcdfghjklmnpqrstvwxyz"
     vowels = "aeiou"
+    initial = []
     if cons.include?(word[0])
-      initial = word.slice(0,)
-      word = "#{word.slice(1, word.length)}#{word[0]}ay"
+      i = 0 
+      until vowels.include?(word[i]) do 
+        initial << word[i]
+        i += 1 
+      end 
+      word = "#{word.slice(word[i], word.length)}#{word.slice(0,word[i])}ay"
     else
       word = "#{word}way"
     end
