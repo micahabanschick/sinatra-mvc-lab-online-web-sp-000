@@ -20,7 +20,7 @@ class PigLatinizer
         initial << word[i]
         i += 1 
       end 
-      word = "#{word.slice(word[i], word.length)}#{word.slice(0,word[i])}ay"
+      word = "#{word.slice(i, word.length)}#{word.slice(0, i)}ay"
     else
       word = "#{word}way"
     end
