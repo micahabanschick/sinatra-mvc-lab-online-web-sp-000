@@ -11,7 +11,7 @@ class PigLatinizer
   end
   
   def pig_word(word)
-    cons = "bcdfghjklmnpqrstvwxyz"
+    cons = "BCDFGHJKLMNPQRSTVWXYZbcdfghjklmnpqrstvwxyz"
     vowels = "aeiou"
     initial = []
     if cons.include?(word[0])
